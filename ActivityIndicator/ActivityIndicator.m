@@ -67,6 +67,8 @@ static NSString *const kRotationAnimationKey = @"rotation";
 }
 
 - (void)startAnimating {
+    [self _restartAnimationIfNeeded];
+    
     if(self.animating) {
         return;
     }
